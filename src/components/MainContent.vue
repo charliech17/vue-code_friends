@@ -36,7 +36,7 @@ export default {
           number: "09xx-xxx-xxx",
           descreption:
             "The friend i met when serving in army, he is a great and experienced frontend engineer",
-          link: "https://github.com/dandanXO/",
+          link: "https:// /dandanXO/",
         },
       ],
     };
