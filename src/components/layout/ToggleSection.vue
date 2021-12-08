@@ -1,5 +1,5 @@
 <template>
-  <base-section class="base_sec">
+  <base-section class="base_section">
     <base-button @click="showButtonPress" :mode="showButtonMode" ref="show"
       >Show</base-button
     >
@@ -61,7 +61,7 @@ div {
   display: flex;
 }
 
-.base_sec {
+.base_section {
   padding-bottom: 0.8rem;
   padding-top: 0.8rem;
   margin-top: 2vh;

@@ -1,7 +1,11 @@
 <template>
-  <toggle-section @show="showFriend" @add="addFriend" :selected="selectedTab"></toggle-section>
+  <toggle-section
+    @show="showFriend"
+    @add="addFriend"
+    :selected="selectedTab"
+  ></toggle-section>
   <keep-alive>
-    <component :is="selectedTab"></component>
+    <component :is="selectedTab" @updateArrayList="updateArray"></component>
   </keep-alive>
 
   <!-- <content-show></content-show> -->
@@ -45,7 +49,7 @@ export default {
     return {
       freindInfos: this.infos,
       addNewFriend: this.addFriends,
-      deleteItem: this.deleteFriend
+      deleteItem: this.deleteFriend,
     };
   },
   methods: {
@@ -70,6 +74,9 @@ export default {
     deleteFriend(deleteId) {
       const deleteIndex = this.infos.findIndex((info) => info.id === deleteId);
       this.infos.splice(deleteIndex, 1);
+    },
+    updateArray(myArray) {
+        this.infos = myArray;
     },
   },
 };
